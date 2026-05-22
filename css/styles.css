@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /*Familia de fuentes*/
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+
+
+header nav {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 1rem; 
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+
+#hero {
+  display: flex;
+  flex-direction: column;     /* base: apilado en móvil */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+#hero img {
+  max-width: 100%; /*Puedes medir lo que tú quieras (tu tamaño nativo), PERO tu tope máximo permitido es el 100% de tu padre*/
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+footer a {
+  display: inline-flex;
+  align-items: center;
+
+}
+
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+
+#contacto label {
+  font-weight: 600;
+}
+
+
+#contacto input, #contacto textarea {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font: inherit;
+}
+
+
+#contacto button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer; /*Cambiar de cursor a manita*/
+}
+
+
+header nav .logo {
+  flex-grow: 1;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+#caracteristicas {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+    gap: 16px;
+   flex-wrap: wrap;
+   margin-top: 16px;
+}
+
+.card {
+   flex-basis: 280px;
+  border: 1px solid #e0e0e0;
+  flex-grow: 1;
+  padding: 1rem;
+  border-radius: 8px;
+ 
+}
+
+
+#galeria {
+  padding: 2rem;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+
+.galeria img {
+  max-width: 100%;
+  flex-grow: 1;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+/* ===== TABLET (640px en adelante) ===== */
+@media (min-width: 640px) {
+   .galeria img {
+    width: 48%;   /* 2 imágenes por fila (el ~4% restante absorbe el gap) */
+  }
+}
+
+
+/* ===== ESCRITORIO (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+ #hero {
+    flex-direction: row;       /* hero lado a lado (sobrescribe column de P1.4) */
+    text-align: left;
+    justify-content: space-between;
+  }
+  #hero img {
+    max-width: 50%;             /* la imagen no ocupa todo el ancho en desktop */
+    
+  }
+
+   h1{
+    font-size: 64px;
+    line-height: 1.2;
+   }
+
+  .galeria img {
+    width: 23%;                  /* 4 imágenes por fila */
+  }
+}

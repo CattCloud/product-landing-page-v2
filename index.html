@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>VeloCity — Bicicletas Urbanas</title>
-  
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8">
+    <title>VeloCity — Bicicletas Urbanas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Velocity</a>
+            <a href="#" id="enlace-prueba">Inicio</a>
+            <a href="#">Producto</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div>
+                <h1>Bicicletas Velocity</h1>
+                <p>La bicicleta ligera que te mueve por la ciudad sin atascos ni gasolina</p>
+            </div>
+
+            <img src="img/hero.jpg" alt="Bicicleta Velocity vista lateral">
+        </section>
+        <section>
+            <section id="caracteristicas">
+                <h2>Características</h2>
+                <div class="cards">
+                    <article class="card">
+                        <img src="img/config.svg" alt="" width="48" height="48">
+                        <h3>Material</h3>
+                        <p>Marco de aluminio 6061 — liviano y resistente</p>
+                    </article>
+                    <article class="card">
+                        <img src="img/config.svg" alt="" width="48" height="48">
+                        <h3>Velocidad</h3>
+                        <p>21 velocidades Shimano — control total en pendientes y llano</p>
+                    </article>
+                    <article class="card">
+                        <img src="img/config.svg" alt="" width="48" height="48">
+                        <h3>Seguridad</h3>
+                        <p>Frenos de disco hidráulicos — frenado preciso en seco y lluvia</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="galeria">
+                <img src="img/img1.png" alt="Vista 1 del producto">
+                <img src="img/img2.jpg" alt="Vista 2 del producto">
+                <img src="img/img3.jpg" alt="Vista 3 del producto">
+                <img src="img/img4.jpg" alt="Vista 4 del producto">
+            </div>
+        </section>
+
+    </main>
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Escribe aqui un mensaje..."></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>Contacto: erick@velocity.com</p>
+        <a href="#" aria-label="Síguenos en Facebook">
+            <img src="img/facebook.svg" alt="" width="32" height="32">
+        </a>
+        <a href="#" aria-label="Síguenos en Instagram">
+            <img src="img/instagram.svg" alt="" width="32" height="32">
+        </a>
+        <a href="#" aria-label="Síguenos en LinkedIn">
+            <img src="img/linkedin.svg" alt="" width="32" height="32">
+        </a>
+    </footer>
 </body>
+
 </html>
