@@ -8,6 +8,7 @@ body {
   font-family: "Inter", sans-serif; /*Familia de fuentes*/
   line-height: 1.5;
   color: #1a1a1a;
+  
 }
 
 
@@ -48,11 +49,13 @@ footer {
   padding: 1rem 2rem;
   gap: 1rem;
 }
-footer a {
-  display: inline-flex;
-  align-items: center;
 
+
+#redes-sociales{
+   display: flex;
+   gap: 4px;
 }
+
 
 
 #contacto {
@@ -144,11 +147,160 @@ header nav .logo {
 }
 
 
+/* ========================= PRECIOS.HTML ========================= */
+.planes {
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+
+
+.plan {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  background: #fff;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan .precio {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+#content-precios {
+  text-align: center;
+}
+
+
+.plan ul {
+  list-style: none;
+  text-align: center;
+}
+
+.plan a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border: #1a1a1a 1px solid;
+  border-radius: 5px;
+  padding: 4px 16px;
+}
+
+
+.clientes {
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.logo-cliente {
+  background: #f5f5f5;
+  padding: 24px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/* ========================= FAQ.HTML ========================= */
+
+/* BASE: móvil — todo apilado en 1 columna */
+.faq-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 16px;
+  min-height: 100vh;
+
+}
+
+.faq-layout header {
+  grid-area: header;
+}
+
+.faq-nav {
+  grid-area: nav;
+
+
+  padding: 16px;
+  margin: 0px 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.faq-main {
+  grid-area: main;
+
+  padding: 16px;
+}
+
+.faq-layout footer {
+  grid-area: footer;
+}
+
+
+.faq-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-main details {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+}
+
+.faq-main summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-layout h1 {
+   padding: 16px;
+   text-align: center;
+}
+
+
+
+
+
+/* =========================MEDIAS QUERIES ========================= */
+
 /* ===== TABLET (640px en adelante) ===== */
 @media (min-width: 640px) {
    .galeria img {
     width: 48%;   /* 2 imágenes por fila (el ~4% restante absorbe el gap) */
   }
+
+   .planes {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+    .faq-layout {
+    grid-template-areas:
+      "header header"
+      "nav    main"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
 }
 
 
@@ -164,7 +316,7 @@ header nav .logo {
     
   }
 
-   h1{
+   #index-titulo{
     font-size: 64px;
     line-height: 1.2;
    }
@@ -172,4 +324,10 @@ header nav .logo {
   .galeria img {
     width: 23%;                  /* 4 imágenes por fila */
   }
+
+    .planes {
+    grid-template-columns: repeat(4,1fr);
+  }
 }
+
+
